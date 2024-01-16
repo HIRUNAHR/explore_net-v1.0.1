@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           theme: theme,
           title: 'explore_net',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.composeScreen,
+          initialRoute: AppRoutes.categoriesScreen,
           routes: AppRoutes.routes,
         );
       },

@@ -52,7 +52,6 @@ class ImagesPage extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
       title: Padding(
@@ -82,7 +81,6 @@ class ImagesPage extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildTwentyEight(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 3.h),
@@ -119,11 +117,11 @@ class ImagesPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomImageView(
-                  imagePath: ImageConstant.img357,
+                Image.asset(
+                  'assets/images/makalu.jpg',
                   height: 132.v,
                   width: 227.h,
-                  alignment: Alignment.center,
+                  fit: BoxFit.cover,
                 ),
               ],
             ),
@@ -133,7 +131,6 @@ class ImagesPage extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildFour(BuildContext context) {
     return SizedBox(
       height: 198.v,
@@ -154,18 +151,17 @@ class ImagesPage extends StatelessWidget {
               ),
             ),
           ),
-          CustomImageView(
-            imagePath: ImageConstant.img4,
+          Image.asset(
+            'assets/images/lohtse.jpg',
             height: 198.v,
             width: 345.h,
-            alignment: Alignment.center,
+            fit: BoxFit.cover,
           ),
         ],
       ),
     );
   }
 
-  /// Section Widget
   Widget _buildSix(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 3.h),
@@ -191,11 +187,11 @@ class ImagesPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomImageView(
-                  imagePath: ImageConstant.img6,
+                Image.asset(
+                  'assets/images/K2.jpg',
                   height: 136.v,
                   width: 163.h,
-                  alignment: Alignment.center,
+                  fit: BoxFit.cover,
                 ),
               ],
             ),
@@ -219,11 +215,11 @@ class ImagesPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomImageView(
-                  imagePath: ImageConstant.img2,
+                Image.asset(
+                  'assets/images/beaches.jpg',
                   height: 136.v,
                   width: 161.h,
-                  alignment: Alignment.center,
+                  fit: BoxFit.cover,
                 ),
               ],
             ),
@@ -233,7 +229,6 @@ class ImagesPage extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildEleven(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 3.h),
@@ -246,11 +241,11 @@ class ImagesPage extends StatelessWidget {
             decoration: AppDecoration.fillGray.copyWith(
               borderRadius: BorderRadiusStyle.roundedBorder8,
             ),
-            child: CustomImageView(
-              imagePath: ImageConstant.img11,
+            child: Image.asset(
+              'assets/images/forests.jpg',
               height: 102.v,
               width: 226.h,
-              alignment: Alignment.topCenter,
+              fit: BoxFit.cover,
             ),
           ),
           SizedBox(
@@ -272,11 +267,11 @@ class ImagesPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomImageView(
-                  imagePath: ImageConstant.img5,
+                Image.asset(
+                  'assets/images/rivers.jpg',
                   height: 106.v,
                   width: 97.h,
-                  alignment: Alignment.topCenter,
+                  fit: BoxFit.cover,
                 ),
               ],
             ),
@@ -285,4 +280,278 @@ class ImagesPage extends StatelessWidget {
       ),
     );
   }
+}
+
+@override
+Widget build(BuildContext context) {
+  return SafeArea(
+    child: Scaffold(
+      appBar: _buildAppBar(context),
+      body: SizedBox(
+        width: SizeUtils.width,
+        child: SingleChildScrollView(
+          padding: EdgeInsets.only(top: 12.v),
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 13.h),
+            child: Column(
+              children: [
+                _buildTwentyEight(context),
+                SizedBox(height: 16.v),
+                _buildFour(context),
+                SizedBox(height: 16.v),
+                _buildSix(context),
+                SizedBox(height: 8.v),
+                _buildEleven(context),
+                SizedBox(height: 16.v),
+                Container(
+                  height: 198.v,
+                  width: 343.h,
+                  decoration: BoxDecoration(
+                    color: appTheme.gray100,
+                    borderRadius: BorderRadius.circular(
+                      8.h,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) {
+  return CustomAppBar(
+    title: Padding(
+      padding: EdgeInsets.only(left: 16.h),
+      child: Row(
+        children: [
+          AppbarSubtitleThree(
+            text: "Back",
+            margin: EdgeInsets.only(
+              top: 4.v,
+              bottom: 12.v,
+            ),
+          ),
+          AppbarSubtitle(
+            text: "Images",
+            margin: EdgeInsets.only(left: 82.h),
+          ),
+        ],
+      ),
+    ),
+    actions: [
+      AppbarSubtitleFour(
+        text: "Next",
+        margin: EdgeInsets.fromLTRB(16.h, 13.v, 16.h, 22.v),
+      ),
+    ],
+  );
+}
+
+/// Section Widget
+Widget _buildTwentyEight(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 3.h),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          height: 128.v,
+          width: 96.h,
+          margin: EdgeInsets.only(top: 4.v),
+          decoration: BoxDecoration(
+            color: appTheme.gray100,
+            borderRadius: BorderRadius.circular(
+              8.h,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 132.v,
+          width: 231.h,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 128.v,
+                  width: 231.h,
+                  decoration: BoxDecoration(
+                    color: appTheme.gray100,
+                    borderRadius: BorderRadius.circular(
+                      8.h,
+                    ),
+                  ),
+                ),
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.img357,
+                height: 132.v,
+                width: 227.h,
+                alignment: Alignment.center,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+/// Section Widget
+Widget _buildFour(BuildContext context) {
+  return SizedBox(
+    height: 198.v,
+    width: 346.h,
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        Align(
+          alignment: Alignment.center,
+          child: Container(
+            height: 198.v,
+            width: 343.h,
+            decoration: BoxDecoration(
+              color: appTheme.gray100,
+              borderRadius: BorderRadius.circular(
+                8.h,
+              ),
+            ),
+          ),
+        ),
+        CustomImageView(
+          imagePath: ImageConstant.img4,
+          height: 198.v,
+          width: 345.h,
+          alignment: Alignment.center,
+        ),
+      ],
+    ),
+  );
+}
+
+/// Section Widget
+Widget _buildSix(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 3.h),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        SizedBox(
+          height: 136.v,
+          width: 163.h,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Align(
+                alignment: Alignment.topCenter,
+                child: Container(
+                  height: 128.v,
+                  width: 163.h,
+                  decoration: BoxDecoration(
+                    color: appTheme.gray100,
+                    borderRadius: BorderRadius.circular(
+                      8.h,
+                    ),
+                  ),
+                ),
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.img6,
+                height: 136.v,
+                width: 163.h,
+                alignment: Alignment.center,
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 136.v,
+          width: 164.h,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Align(
+                alignment: Alignment.topCenter,
+                child: Container(
+                  height: 128.v,
+                  width: 164.h,
+                  decoration: BoxDecoration(
+                    color: appTheme.gray100,
+                    borderRadius: BorderRadius.circular(
+                      8.h,
+                    ),
+                  ),
+                ),
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.img2,
+                height: 136.v,
+                width: 161.h,
+                alignment: Alignment.center,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+/// Section Widget
+Widget _buildEleven(BuildContext context) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 3.h),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          height: 128.v,
+          width: 231.h,
+          decoration: AppDecoration.fillGray.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder8,
+          ),
+          child: CustomImageView(
+            imagePath: ImageConstant.img11,
+            height: 102.v,
+            width: 226.h,
+            alignment: Alignment.topCenter,
+          ),
+        ),
+        SizedBox(
+          height: 128.v,
+          width: 100.h,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 128.v,
+                  width: 96.h,
+                  decoration: BoxDecoration(
+                    color: appTheme.gray100,
+                    borderRadius: BorderRadius.circular(
+                      8.h,
+                    ),
+                  ),
+                ),
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.img5,
+                height: 106.v,
+                width: 97.h,
+                alignment: Alignment.topCenter,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
